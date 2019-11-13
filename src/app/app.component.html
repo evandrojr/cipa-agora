@@ -1,71 +1,81 @@
 <style>
-    * {
-     box-sizing: border-box;
-    }
-    .myForm {
-      display: flex;
-      background-color: beige;
-      border-radius: 3px;
-      padding: 1.8em;
-    }
-    /* .message {
+  * {
+    box-sizing: border-box;
+  }
+  .myForm {
+    display: flex;
+    background-color: beige;
+    border-radius: 3px;
+    padding: 1.8em;
+  }
+  /* .message {
       display: flex;
       flex-direction: column;
       order: 2;
     } */
-    .message > textarea {
-     flex: 1;
-     min-width: 18em;
-    }
-    .contact {
-       flex: 1;
-      order: 1;
-       margin-right: 2em;
-    }
-    .contact input {
-      width: 100%;
-    }
-    .contact input,
-    .contact button {
-      padding: 1em;
-      margin-bottom: 1em;
-    }
-    .contact button {
-     background: gray;
-     color: white;
-     border: 0;
-    }
+  .message > textarea {
+    flex: 1;
+    min-width: 18em;
+  }
+  .contact {
+    flex: 1;
+    order: 1;
+    margin-right: 2em;
+  }
+  .contact input {
+    width: 100%;
+  }
+  .contact input,
+  .contact button {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  .contact button {
+    background: gray;
+    color: white;
+    border: 0;
+  }
 
-    textarea{
-      height: 193px;
-      width: 100%;
-    }
-  </style>
+  textarea {
+    height: 193px;
+    width: 100%;
+  }
+</style>
 
-
-{{diagnostic}}
-  <form class="myForm" #appComponent="ngForm">
-    <!-- <div class="message">
+{{ diagnostic }}
+<form
+  class="myForm"
+  #appComponent="ngForm"
+  (ngSubmit)="onClickSubmit(appComponent.value)"
+>
+  <!-- <div class="message">
 
     </div> -->
-    <div class="contact">
-      <label for="name">Nome</label>
-      <input type="text" id="nome" [(ngModel)]="model.nome" name="nome">
+  <div class="contact">
+    <label for="name">Nome</label>
+    <input type="text" id="nome" [(ngModel)]="model.nome" name="nome" />
 
-      <label for="townborn">Telefone</label>
-      <input type="text" id="telefone">
+    <label for="townborn">Telefone</label>
+    <input
+      type="text"
+      id="telefone"
+      [(ngModel)]="model.telefone"
+      name="telefone"
+    />
 
-      <label for="email">Email</label>
-      <input type="email" id="email">
+    <label for="email">Email</label>
+    <input type="email" id="email" [(ngModel)]="model.email" name="email" />
 
-      <label for="msg">Mensagem</label>
-      <textarea id="ocorrencia" required></textarea>
+    <label for="msg">Mensagem</label>
+    <textarea
+      id="mensagem"
+      required
+      [(ngModel)]="model.mensagem"
+      name="mensagem"
+    ></textarea>
 
-      <button type="submit">Enviar</button>
-    </div>
-  </form>
-
-
-
+    <button type="submit">Enviar</button>
+  </div>
+</form>
 
 <router-outlet></router-outlet>
