@@ -9,7 +9,27 @@
 </head>
 <body>
 
-  <img src="assets/banner.png" width="200px" alt="">
+  <style>
+    [flex]{
+      display: flex;
+      align-items: center;
+  justify-content: space-between;
+    }
+    [flex-row]{
+      flex-direction: row;
+    }
+  </style>
+  <div flex flex-row>
+    <div>
+      <img src="assets/banner.png" width="200px" alt="">
+    </div>
+    <div style="font-size: larger;text-align: center;">
+        <h1>Formulário para comunicações</h1>
+
+    </div>
+      <div>&nbsp;</div>
+  </div>
+
   <app-root></app-root>
 </body>
 </html>
