@@ -7,7 +7,7 @@ import { Postagem } from './postagem';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // constructor(
+  // constructor(-
   //   public nome: string,
   //   public telefone: string,
   //   public email: string,
