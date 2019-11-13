@@ -382,7 +382,7 @@
             /* harmony import */ var _postagem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./postagem */ "./src/app/postagem.ts");
             var AppComponent = /** @class */ (function () {
                 function AppComponent() {
-                    // constructor(
+                    // constructor(-
                     //   public nome: string,
                     //   public telefone: string,
                     //   public email: string,
