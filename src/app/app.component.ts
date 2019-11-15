@@ -36,6 +36,7 @@ export class AppComponent {
     const apiUrl = `${this.telegramUrl}${mensagem}`;
     return this.telegram.Notificar(mensagem).subscribe((data: {}) => {
       console.log(data);
+      alert("Mensagem enviada com sucesso, em breve entraremos em contato")
     });
   }
 }
